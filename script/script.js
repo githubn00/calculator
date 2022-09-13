@@ -32,7 +32,7 @@ function buttonHandler(e){
                     isSecondOperand = true;
                     screenLeft.innerText = '';
                }
-            if(screenMid.innerText.length < 22)
+            if(screenMid.innerText.length < 20)
                 screenMid.innerText += buttonText;
             if(screenRight.innerText != '')
                 secondOperand = parseFloat(screenLeft.innerText + screenMid.innerText);
@@ -148,7 +148,7 @@ function toggleMinusSign(){
 function addDecimalPoint() {
     let str= new String(screenMid.innerText);
 
-    if(!str.includes('.') && str.length < 22)
+    if(!str.includes('.') && str.length < 20)
         screenMid.innerText += ".";
     if(!isSecondOperand){
         screenMid.innerText = '0.';
